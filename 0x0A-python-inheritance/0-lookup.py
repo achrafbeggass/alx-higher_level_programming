@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-"""Defines an object attribute lookup function."""
+lookup = __import__('0-lookup').lookup
 
+class MyClass1(object):
+    pass
 
-def lookup(obj):
-    """Return a list of an object's available attributes."""
-    return (dir(obj))
+class MyClass2(object):
+    my_attr1 = 3
+    def my_meth(self):
+        pass
+
+print(lookup(MyClass1))
+print(lookup(MyClass2))
+print(lookup(int))
