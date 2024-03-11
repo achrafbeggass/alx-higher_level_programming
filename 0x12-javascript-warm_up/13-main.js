@@ -1,8 +1,3 @@
 #!/usr/bin/node
-const myObject = {
-  type: 'object',
-  value: 12
-};
-console.log(myObject);
-myObject.value = 89;
-console.log(myObject);
+const add = require('./13-add').add;
+console.log(add(3, 5));
